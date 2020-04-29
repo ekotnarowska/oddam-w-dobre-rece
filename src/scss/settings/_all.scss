@@ -1,0 +1,8 @@
+@import "_colors.scss";
+@import "_fonts.scss";
+
+body {
+  font-family: $base__font-family;
+  font-size: $base__font-size;
+  color: $base__text-color;
+}
