@@ -1,25 +1,26 @@
 import React from 'react';
-import HomeHeader from "./HomeHeader/HomeHeader";
-import HomeThreeColumns from "./HomeThreeColumns/HomeThreeColumns";
-import HomeFourSteps from "./Home4Steps/HomeFourSteps";
-import HomeAboutUs from "./HomeAboutUs/HomeAboutUs";
-import HomeWhoWeHelp from "./HomeWhoWeHelp/HomeWhoWeHelp";
-import HomeContactUs from "./HomeContactUs/HomeContactUs";
 
+import HomeHeader from "./HomeHeader";
+import HomeThreeColumns from "./HomeThreeColumns";
+import HomeFourSteps from "./HomeFourSteps";
+import HomeAboutUs from "./HomeAboutUs";
+import HomeWhoWeHelp from "./HomeWhoWeHelp";
+import HomeContactUs from "./HomeContactUs";
 
 
 
 const Home = () => {
 
+
     return (
         <>
+
             <HomeHeader/>
             <HomeThreeColumns/>
             <HomeFourSteps/>
             <HomeAboutUs/>
             <HomeWhoWeHelp/>
             <HomeContactUs/>
-
         </>
     )
 }
