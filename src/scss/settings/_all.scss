@@ -1,5 +1,5 @@
-@import "_colors.scss";
-@import "_fonts.scss";
+@import "colors.scss";
+@import "fonts.scss";
 
 * {
   box-sizing: border-box;
@@ -24,4 +24,28 @@ h2 {
 
 h4 {
   font-size: 1.125*$base__font-size;
+}
+
+.button {
+  text-transform: uppercase;
+  color: $base__text-color;
+  border: 0.75px solid #3C3C3C;
+  width: 310px;
+  height: 120px;
+  padding: 10px 50px;
+  text-align: center;
+  line-height: 45px;
+  font-weight: 300;
+}
+
+@mixin decoration {
+  display: block;
+  content: "";
+  position: absolute;
+  background: transparent url('../../assets/Decoration.svg') no-repeat padding-box;
+  bottom: -35px;
+  left:50%;
+  height: 33px;
+  width: 253px;
+  transform: translateX(-50%);
 }

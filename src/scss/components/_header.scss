@@ -1,3 +1,5 @@
+@import "../settings/all";
+
 .header {
 
   padding-top: 45px;
@@ -59,18 +61,13 @@
     font-size: 2.375*$base__font-size;
     text-align: center;
     line-height: 2.45*$base__font-size;
+    height: 100px;
     letter-spacing: -0.76px;
     position: relative;
 
     &::after {
-      display: block;
-      content:"";
-      position: absolute;
-      background: transparent url('../../assets/Decoration.svg') no-repeat padding-box;
-      top:110%;
-      left:30%;
-      height: 33px;
-      width: 37%;
+      @include decoration;
+      
     }
 
   }
@@ -81,15 +78,7 @@
   }
 
   &__button {
-    text-transform: uppercase;
-    border: 0.75px solid #3C3C3C;
-    width: 310px;
-    height: 120px;
-    padding: 10px 50px;
-    text-align: center;
-    font-size: 2.25*$base__font-size;
-    line-height: 45px;
-    font-weight: 300;
+
   }
 
 

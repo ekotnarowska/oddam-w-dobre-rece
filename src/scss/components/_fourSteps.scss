@@ -1,7 +1,9 @@
+@import "../settings/all";
 .fourSteps {
   height: 624px;
 
   &__title {
+    height: 52px;
     letter-spacing: -0.76px;
     text-align: center;
     margin: 55px 0 92px 0;
@@ -10,15 +12,7 @@
     position: relative;
 
     &::after {
-      display: block;
-      content: "";
-      position: absolute;
-      background: transparent url('../../assets/Decoration.svg') no-repeat padding-box;
-      top: 120%;
-      left: 40%;
-      height: 33px;
-      width: 37%;
-
+     @include decoration
     }
   }
   &__boxes {
@@ -26,28 +20,47 @@
 
     .container {
       width: 1000px;
-      height: auto;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+      padding: 0 20px;
     }
   }
 
   &__box  {
-    width: 130px;
-    margin:70px 80px;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
   &__box-img {
-    width:83px;
-    height:83px;
-    //background: transparent url('../../assets/Icon-1.png') no-repeat;
+    width: 83px;
+    height: 83px;
 
   }
+    .one {
+      background: transparent url('../../assets/Icon-4.png') no-repeat;
+    }
+    .two {
+      background: transparent url('../../assets/Icon-2.png') no-repeat;
+    }
+    .three {
+      background: transparent url('../../assets/Icon-3.png') no-repeat;
+    }
+    .four {
+      background: transparent url('../../assets/Icon-1.png') no-repeat;
+    }
+
+
+
 
   &__box-title {
-    margin: 10px 0 20px 0;
-    text-align: center;
+    margin: 15px 0 25px 0;
     position: relative;
+    text-align: center;
 
     &::after {
       display: block;
@@ -55,14 +68,20 @@
       position: absolute;
       height:0;
       width: 60px;
-      border: 1px solid #707070;
-      top: 130%;
-      left: 30%;
-    ;
+      border-bottom: 1px solid #707070;
+      bottom:-10px;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
+  &__box-text {
+    margin-bottom: 70px;
+    text-align: center;
+    line-height: 1.2em;
+  }
 
-
-
+  &__button  {
+    margin: 25px auto;
+  }
 
 }
