@@ -1,0 +1,46 @@
+.statistics  {
+  height: 384px;
+  background: transparent url('../../assets/3 Columns Background.png') no-repeat;
+
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box {
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    margin:30px;
+
+  }
+
+  &__number {
+    font-size: 5.625*$base__font-size;
+    color: $special__text-color;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin: 10px 0 28px 0;
+    text-align: center;
+  }
+
+  &__text {
+    font-family: $alt__font-family;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -0.32px;
+    text-align: center;
+  }
+
+
+}

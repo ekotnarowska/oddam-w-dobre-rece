@@ -1,0 +1,87 @@
+@import "../settings/all";
+.fourSteps {
+  height: 624px;
+
+  &__title {
+    height: 52px;
+    letter-spacing: -0.76px;
+    text-align: center;
+    margin: 55px 0 92px 0;
+    font-size: 2.375*$base__font-size;
+    line-height: 2.45*$base__font-size;
+    position: relative;
+
+    &::after {
+     @include decoration
+    }
+  }
+  &__boxes {
+    background: $background__lighter-color;
+
+    .container {
+      width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+  }
+
+  &__box  {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__box-img {
+    width: 83px;
+    height: 83px;
+
+  }
+    .one {
+      background: transparent url('../../assets/Icon-4.png') no-repeat;
+    }
+    .two {
+      background: transparent url('../../assets/Icon-2.png') no-repeat;
+    }
+    .three {
+      background: transparent url('../../assets/Icon-3.png') no-repeat;
+    }
+    .four {
+      background: transparent url('../../assets/Icon-1.png') no-repeat;
+    }
+
+
+
+
+  &__box-title {
+    margin: 15px 0 25px 0;
+    position: relative;
+    text-align: center;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      height:0;
+      width: 60px;
+      border-bottom: 1px solid #707070;
+      bottom:-10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__box-text {
+    margin-bottom: 70px;
+    text-align: center;
+    line-height: 1.2em;
+  }
+
+  &__button  {
+    margin: 25px auto;
+  }
+
+}

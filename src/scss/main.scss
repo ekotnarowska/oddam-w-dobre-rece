@@ -1,8 +1,15 @@
+@import "generic/reset";
 @import "settings/colors";
 @import "settings/fonts";
-@import "generic/reset";
+@import "settings/all";
+@import "components/login";
+@import "components/header";
+@import "components/threeColumns";
+@import "components/fourSteps";
+@import "components/whoWeHelp";
+@import "components/aboutUs";
+@import "components/contactUs";
 
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
 

@@ -1,0 +1,83 @@
+@import "../settings/all";
+
+.header {
+
+  padding-top: 45px;
+  padding-right: 5%;
+
+  .active {
+    border: 1px solid $base__text-color;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+    width: 100%;
+    height: 88vh;
+    grid-template-areas: "image top"
+    "image bottom";
+  }
+
+  &__image {
+    background: transparent url("../../assets/Hero Image.png") no-repeat right;
+    background-size: cover;
+    grid-area: image;
+
+  }
+
+  &__top {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .login__link {
+    font-size: 0.875*$base__font-size;
+    color: $base__text-color;
+    padding: 0 20px 0 0;
+    margin-bottom: 25px;
+  }
+
+  &__menu {
+    display: flex;
+    flex-direction: row;
+
+    &-item {
+      padding: 20px;
+    }
+  }
+
+  &__bottom {
+    grid-area: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+  }
+
+  &__title {
+    font-size: 2.375*$base__font-size;
+    text-align: center;
+    line-height: 2.45*$base__font-size;
+    height: 100px;
+    letter-spacing: -0.76px;
+    position: relative;
+
+    &::after {
+      @include decoration;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+
+  }
+
+
+}
