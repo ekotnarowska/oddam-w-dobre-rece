@@ -1,0 +1,94 @@
+@import "../settings/all";
+
+.contact {
+  height: 100vh;
+  width: 100%;
+  padding-right: 5%;
+  background: transparent url('../../assets/background-image.png') no-repeat fixed center/cover;
+  opacity: 0.4;
+  position: relative;
+  z-index: -10;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+  }
+
+  &__title {
+    display: block;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    margin:200px auto 130px auto;
+
+    &::after {
+      @include decoration
+    }
+  }
+
+  &__form {
+    width: 528px;
+    //display: flex;
+    //flex-direction: column;
+    //align-items: flex-end;
+    //justify-content: center;
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: #3C3C3C26;
+      font-size: 1.125*$base__font-size;
+      line-height: 1.33rem;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: #3C3C3C26;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+      color: #3C3C3C26;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+      color: #3C3C3C26;
+    }
+
+    .contact__inputs {
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    label {
+      font-weight: 600;
+    }
+
+    .contact__input {
+      display: block;
+      width: 90%;
+      background: none;
+      outline: 0;
+      border: 0;
+      border-bottom: 1px solid #3C3C3C26;
+      height: 40px;
+      font-size: 20px;
+      margin-bottom: 40px;
+      padding-top: 10px;
+    }
+
+    .contact__message {
+      display: block;
+      width: 100%;
+      resize: none;
+      background: none;
+      outline: 0;
+      border: 0;
+      border-bottom: 1px solid #3C3C3C26;
+      height: 100px;
+      padding-top: 10px;
+
+    }
+  }
+
+}
