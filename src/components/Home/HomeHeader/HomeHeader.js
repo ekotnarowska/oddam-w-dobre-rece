@@ -16,10 +16,10 @@ const HomeHeader = () => {
                         <Link to='/register' className="login__link">Załóż konto</Link>
                     </div>
                     <ul className="header__menu">
-                        <li className="header__menu-item"><Link to="/" activeClassName="active">Start</Link></li>
-                        <li className="header__menu-item"><ScrollLink to="fourSteps" activeClassName="active">O co chodzi</ScrollLink></li>
-                        <li className="header__menu-item"><ScrollLink to="aboutUs" activeClassName="active">O nas</ScrollLink></li>
-                        <li className="header__menu-item"><ScrollLink to="foundationAndOrganization" activeClassName="active">Fundacje i
+                        <li className="header__menu-item"><Link to="/" >Start</Link></li>
+                        <li className="header__menu-item"><ScrollLink to="fourSteps" >O co chodzi</ScrollLink></li>
+                        <li className="header__menu-item"><ScrollLink to="aboutUs" >O nas</ScrollLink></li>
+                        <li className="header__menu-item"><ScrollLink to="foundations">Fundacje i
                             Organizacje</ScrollLink>
                         </li>
                         <li className="header__menu-item"><ScrollLink to="contactUs">Kontakt</ScrollLink></li>
