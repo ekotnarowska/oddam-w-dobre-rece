@@ -65,27 +65,41 @@ const HomeContactUs = () => {
     }
 
     const sendMessage = (name, email, message) => {
-        fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact. `, {
+        fetch(`https://fer-api.coderslab.pl/v1/portfolio/contact`, {
             method: "POST",
             body: JSON.stringify({name, email, message}),
             headers: {
-                'Content type': 'application/json',
+                'Content-Type': 'application/json',
             }
         })
             .then(response => response.json())
-            .then(data => setStatus(data.status))
+            .then(data => {
+                if (data.status === "success") {
+                    setSuccess(true)
+                    setInputs({
+                        name: "",
+                    email: "",
+                    message: ""
+                    })
+
+                }
+                if (data.status === "error") {
+                    const errors = {}
+                    Object.values(data.errors).forEach(err => {
+                        errors[err.param] = err.msg
+                    })
+                    setErrors(errors)
+                }
+            })
             .catch(error => setError(error));
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        console.log(validate())
         if (validate()) {
-            setSuccess(true)
             sendMessage(inputs.name, inputs.email, inputs.message)
-            inputs.name = "";
-            inputs.email = "";
-            inputs.message = "";
+
         } else {
             return errors
         }

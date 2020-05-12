@@ -15,7 +15,6 @@ const Home = () => {
 
     return (
         <>
-
             <HomeHeader/>
             <HomeThreeColumns/>
             <HomeFourSteps/>

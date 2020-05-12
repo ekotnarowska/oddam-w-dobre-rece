@@ -1,7 +1,6 @@
 import React from 'react';
-import {Link} from"react-router-dom"
-import {Link as ScrollLink} from "react-scroll";
-import "../../../scss/main.scss";
+import {Link} from "react-router-dom"
+import HomeHeaderMenu from "./HomeHeaderMenu";
 
 
 const HomeHeader = () => {
@@ -10,21 +9,7 @@ const HomeHeader = () => {
         <div className="header">
             <div className="container">
                 <div className="header__image"></div>
-                <div className="header__top">
-                    <div className="header__login-bar ">
-                        <Link to='/login' className="login__link">Zaloguj się</Link>
-                        <Link to='/register' className="login__link">Załóż konto</Link>
-                    </div>
-                    <ul className="header__menu">
-                        <li className="header__menu-item"><Link to="/" >Start</Link></li>
-                        <li className="header__menu-item"><ScrollLink to="fourSteps" >O co chodzi</ScrollLink></li>
-                        <li className="header__menu-item"><ScrollLink to="aboutUs" >O nas</ScrollLink></li>
-                        <li className="header__menu-item"><ScrollLink to="foundations">Fundacje i
-                            Organizacje</ScrollLink>
-                        </li>
-                        <li className="header__menu-item"><ScrollLink to="contactUs">Kontakt</ScrollLink></li>
-                    </ul>
-                </div>
+                <HomeHeaderMenu/>
                 <div className="header__bottom">
                     <h1 className="header__title">Zacznij pomagać! Oddaj niechciane rzeczy w zaufane
                         ręce</h1>

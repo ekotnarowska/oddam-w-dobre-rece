@@ -1,0 +1,41 @@
+@import "../settings/all";
+
+.logout {
+  .container {
+    height: 90vh;
+    padding-top: 45px;
+    padding-right: 5%;
+
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__title {
+    display: block;
+    height: 50px;
+    position: relative;
+    margin-bottom: 3.5em;
+
+    &::after {
+      @include decoration
+    }
+
+  }
+  &__button {
+    font-size: 1.125*$base__font-size;
+    color: $base__text-color;
+    font-weight: 300;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+  }
+}
