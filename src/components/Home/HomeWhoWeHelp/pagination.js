@@ -10,11 +10,11 @@ const Pagination = ({itemsPerPage, totalItems, paginate}) => {
         <div>
             <nav>
                 <ul className="pagination">
-                    {pageNumbers.map(number => (
-                        <li key={number} className="pagination__item">
-                            <a onClick={() => paginate(number)} href="!#" className="pagination__link">
-                                {number}
-                            </a>
+                    {new Array(Math.ceil(totalItems / itemsPerPage)).fill(null).map((n, i) => (
+                        <li key={i} className="pagination__item">
+                            <button onClick={() => paginate(i + 1)} href="!#" className="pagination__link">
+                                {i +1}
+                            </button>
                         </li>
                     ))}
                 </ul>

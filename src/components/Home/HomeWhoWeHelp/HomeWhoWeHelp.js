@@ -24,13 +24,16 @@ const HomeWhoWeHelp = () => {
 
     }, []);
     const handleClick = (e) => {
-        setCurrent(e.target.name)
+        setCurrent(e.target.name);
+        setCurrentPage(1)
     };
+
+    const getFundation = () => foundations?.find(fund => fund.name === current) || null
     //get current foundations
     const indexOfLastFoundations = currentPage * itemsPerPage;
     const indexOfFirstFoundations = indexOfLastFoundations - itemsPerPage;
 
-    const currentFoundations = foundations?.find(fund => fund.name === current)?.items?.slice(indexOfFirstFoundations, indexOfLastFoundations);
+    const currentFoundations = getFundation()?.items?.slice(indexOfFirstFoundations, indexOfLastFoundations);
     console.log(currentFoundations);
     console.log(currentFoundations)
 
@@ -52,9 +55,9 @@ const HomeWhoWeHelp = () => {
                             zbiórkom
                         </button>
                     </div>
+                    <p>{getFundation()?.desc}</p>
                     <ul className='foundation__list'>
-                        {foundations?.find(fund => fund.name === current)?.items?.map((e, i) => {
-                            console.log(e)
+                        {currentFoundations?.map((e, i) => {
                             return (
                                 <li className="foundation__item" key={e.id}>
                                     <div className="foundation__header"><h4>{e.header}</h4><h5>{e.subheader}</h5></div>
@@ -62,7 +65,7 @@ const HomeWhoWeHelp = () => {
                             )
                         })}
                     </ul>
-                    <Pagination itemsPerPage={itemsPerPage} totalItems={foundations.length} paginate={paginate}/>
+                    <Pagination itemsPerPage={itemsPerPage} totalItems={getFundation()?.items.length || 0} paginate={paginate}/>
                 </div>
             </section>
         </>
