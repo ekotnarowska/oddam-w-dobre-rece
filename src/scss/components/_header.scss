@@ -34,8 +34,12 @@
   &__login-link {
     font-size: 0.875*$base__font-size;
     color: $base__text-color;
-    padding: 0 20px 0 0;
+    padding: 10px 20px;
     margin-bottom: 25px;
+
+    &:hover {
+      border: 0.75px solid $accent__yellow-color;
+    }
   }
 
   &__menu {

@@ -8,7 +8,7 @@ const Logout = () => {
             <div className="container">
                 <HomeHeaderMenu/>
                 <div className="logout__container">
-                    <h2 className="logout__title">Wylogowanie nastąpiło pomyślnie</h2>
+                    <h2 className="logout__title">Wylogowanie nastąpiło pomyślnie!</h2>
                     <Link className="logout__button active" to="/">Strona główna</Link>
                 </div>
             </div>

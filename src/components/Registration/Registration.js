@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
 import HomeHeaderMenu from "../Home/HomeHeader/HomeHeaderMenu";
+import HeaderLoginBar from "../Home/HomeHeader/HeaderLoginBar";
 
 
 const Registration = () => {
@@ -61,9 +62,11 @@ const Registration = () => {
     const handleChange = (e) => {
         e.preventDefault()
         if (validate()) {
-            inputs.email = "";
-            inputs.password = "";
-            inputs.password2 = "";
+            setInputs({
+                email: "",
+                password: "",
+                password2: ""
+            })
         } else {
             return errors
         }
@@ -73,9 +76,12 @@ const Registration = () => {
     return (
         <div className="register">
             <div className="container">
-                <HomeHeaderMenu/>
+                <div className="header__top">
+                    <HeaderLoginBar/>
+                    <Link className="home__button" to="/">Strona główna</Link>
+                </div>
                 <div className="register__container">
-                    <h2 className="register__title">Zaloguj się</h2>
+                    <h2 className="register__title">Zarejestruj się</h2>
                     <form onSubmit={handleChange} action="" className="register__form form">
                         <div className="register__container-form">
                         <label>Email<input

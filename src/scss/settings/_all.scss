@@ -25,7 +25,7 @@ h2 {
 h4 {
   font-size: 1.125*$base__font-size;
 }
-
+//buttons
 .button {
   text-transform: uppercase;
   color: $base__text-color;
@@ -36,6 +36,17 @@ h4 {
   text-align: center;
   line-height: 45px;
   font-weight: 300;
+}
+
+.active {
+  border: 0.75px solid $base__text-color;
+  font-weight: 300;
+}
+.home__button {
+  font-size: 1.125*$base__font-size;
+  color: $base__text-color;
+  font-weight: 300;
+  margin: 20px 15px;
 }
 
 @mixin decoration {

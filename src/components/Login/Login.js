@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom'
 import HomeHeaderMenu from "../Home/HomeHeader/HomeHeaderMenu";
+import HeaderLoginBar from "../Home/HomeHeader/HeaderLoginBar";
 
 const Login = () => {
 
@@ -49,8 +50,10 @@ const Login = () => {
     const handleChange = (e) => {
         e.preventDefault()
         if (validate()) {
-            inputs.email = "";
-            inputs.password = "";
+            setInputs({
+                email: "",
+                password: ""
+            })
         } else {
             return errors
         }
@@ -62,7 +65,10 @@ const Login = () => {
 
             <div className="login">
                 <div className="container">
-                    <HomeHeaderMenu/>
+                    <div className="header__top">
+                    <HeaderLoginBar/>
+                    <Link className="home__button" to="/">Strona główna</Link>
+                    </div>
                     <div className="login__container">
                         <h2 className="login__title">Zaloguj się</h2>
                         <form action="" onSubmit={handleChange} className="login__form form">
