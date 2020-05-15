@@ -1,11 +1,10 @@
 @import "../settings/all";
 
-.login {
+.register {
   .container {
     height: 90vh;
     padding-top: 45px;
     padding-right: 5%;
-
 
   }
 
@@ -20,8 +19,9 @@
     &-form {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       width: 384px;
-      height: 255px;
+      height: 300px;
       padding: 0 40px 20px 40px;
       background: $background__lighter-color;
 
@@ -32,7 +32,7 @@
     display: block;
     height: 50px;
     position: relative;
-    margin-bottom: 3.5em;
+    margin-bottom: 3em;
 
     &::after {
       @include decoration
@@ -66,37 +66,3 @@
     padding: 10px 20px;
   }
 }
-
-.form {
-
-  &__email {
-    display: block;
-    width: 90%;
-    background: none;
-    outline: 0;
-    border: 0;
-    border-bottom: 1px solid #3C3C3C26;
-    height: 40px;
-    font-size: 20px;
-    padding-top: 10px;
-
-  }
-
-  &__password {
-    display: block;
-    width: 90%;
-    background: none;
-    outline: 0;
-    border: 0;
-    border-bottom: 1px solid #3C3C3C26;
-    height: 40px;
-    font-size: 20px;
-    padding-top: 10px;
-
-  }
-
-  &__label {
-    font-weight: 600;
-  }
-}
-
