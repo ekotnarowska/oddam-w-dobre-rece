@@ -45,16 +45,20 @@
   &__menu {
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 
     &-item {
       padding: 20px;
     }
     &-link {
-      color: black;
+      display: block;
+      color: $base__text-color;
+      text-align: center;
+      padding: 10px 10px;
+
       &:hover {
         border: 0.75px solid $base__text-color;
-        padding: 10px 20px;
-        transition: 0.3s ;
+        transform: scale(0.9);
       }
     }
   }
@@ -86,7 +90,10 @@
   }
 
   &__button {
-
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
   }
 
 

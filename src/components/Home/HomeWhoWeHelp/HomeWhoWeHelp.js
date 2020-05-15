@@ -55,7 +55,7 @@ const HomeWhoWeHelp = () => {
                             zbiórkom
                         </button>
                     </div>
-                    <p>{getFundation()?.desc}</p>
+                    <p className="foundation__text">{getFundation()?.desc}</p>
                     <ul className='foundation__list'>
                         {currentFoundations?.map((e, i) => {
                             return (
